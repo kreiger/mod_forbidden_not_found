@@ -7,7 +7,7 @@ static void forbidden_not_found_filter(request_rec *r)
     if (r->status == HTTP_FORBIDDEN)
     {
         r->status = HTTP_NOT_FOUND;
-        ap_log_rerror(APLOG_MARK, APLOG_CRIT, 0, r, "forbidden_not_found_filter: Replaced 403 with 404.");
+        ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, "forbidden_not_found_filter: Replaced 403 with 404.");
     }
 }
 
